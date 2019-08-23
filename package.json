@@ -7,7 +7,7 @@
   "license": "MIT",
   "devDependencies": {
     "cypress": "^3.4.1",
-    "cypress-cucumber-preprocessor": "1.14.1"
+    "cypress-cucumber-preprocessor": "github:jcundill/cypress-cucumber-preprocessor#fixBeforeHooks"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true

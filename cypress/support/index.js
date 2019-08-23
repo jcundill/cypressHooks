@@ -18,3 +18,29 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+const { Before, After } = require('cypress-cucumber-preprocessor/steps');
+
+before(function () {
+    cy.log("Support Before (Global Scope)");
+})
+
+beforeEach(function () {
+    cy.log("Support Before Each (Global Scope)");
+})
+
+after(function () {
+    cy.log("Support After (Global Scope) - this is called in the wrong place, Cypress bug");
+})
+
+afterEach(function () {
+    cy.log("Support After Each (Global Scope)");
+})
+
+Before(function () {
+    cy.log('Cucumber Before (Global Scope)');
+})
+
+After(function () {
+    cy.log('Cucumber After (Global Scope)');
+})
